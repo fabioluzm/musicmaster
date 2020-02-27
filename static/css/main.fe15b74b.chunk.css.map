@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.css"],"names":[],"mappings":"AAAA,KACI,qBAAsB,CACtB,UACJ,CAEA,KACI,iBAAkB,CAClB,UACJ,CAEA,WACI,cACJ","file":"main.fe15b74b.chunk.css","sourcesContent":["body {\r\n    background-color: #000;\r\n    color: #fff;\r\n}\r\n\r\n.app {\r\n    text-align: center;\r\n    padding: 5%;\r\n}\r\n\r\n.app-title {\r\n    font-size: 26px;\r\n}"]}
