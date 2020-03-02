@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "db9b134d68ca5b5ab76623cf52951ace",
+    "revision": "ff4a2ee266369524da8b731d4978aa03",
     "url": "/musicmaster/index.html"
   },
   {
-    "revision": "dbef6702a0d78cf7ff12",
+    "revision": "532fa080faa96d9ffa65",
     "url": "/musicmaster/static/css/main.fe15b74b.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/musicmaster/static/js/2.d8b45f10.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "dbef6702a0d78cf7ff12",
-    "url": "/musicmaster/static/js/main.cc9dcb25.chunk.js"
+    "revision": "532fa080faa96d9ffa65",
+    "url": "/musicmaster/static/js/main.c17de06d.chunk.js"
   },
   {
     "revision": "bcc3aff62c30317896bb",
