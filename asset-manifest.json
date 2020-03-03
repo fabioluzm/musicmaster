@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/musicmaster/static/css/main.28db1d02.chunk.css",
-    "main.js": "/musicmaster/static/js/main.b48d5b54.chunk.js",
-    "main.js.map": "/musicmaster/static/js/main.b48d5b54.chunk.js.map",
+    "main.js": "/musicmaster/static/js/main.f9765e18.chunk.js",
+    "main.js.map": "/musicmaster/static/js/main.f9765e18.chunk.js.map",
     "runtime-main.js": "/musicmaster/static/js/runtime-main.2c640342.js",
     "runtime-main.js.map": "/musicmaster/static/js/runtime-main.2c640342.js.map",
     "static/js/2.9771a62b.chunk.js": "/musicmaster/static/js/2.9771a62b.chunk.js",
     "static/js/2.9771a62b.chunk.js.map": "/musicmaster/static/js/2.9771a62b.chunk.js.map",
     "index.html": "/musicmaster/index.html",
-    "precache-manifest.3143016edd8efd1a34f75753174faf4d.js": "/musicmaster/precache-manifest.3143016edd8efd1a34f75753174faf4d.js",
+    "precache-manifest.18799c6b23cc339cff549cf2181c594b.js": "/musicmaster/precache-manifest.18799c6b23cc339cff549cf2181c594b.js",
     "service-worker.js": "/musicmaster/service-worker.js",
     "static/css/main.28db1d02.chunk.css.map": "/musicmaster/static/css/main.28db1d02.chunk.css.map",
     "static/js/2.9771a62b.chunk.js.LICENSE.txt": "/musicmaster/static/js/2.9771a62b.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.2c640342.js",
     "static/js/2.9771a62b.chunk.js",
     "static/css/main.28db1d02.chunk.css",
-    "static/js/main.b48d5b54.chunk.js"
+    "static/js/main.f9765e18.chunk.js"
   ]
 }
