@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { AUTH_TOKEN } from "./configs/config"
 
 import Profile from './components/profile'
+import Gallery from './components/gallery'
+
 
 
 import { FormGroup, FormControl, InputGroup, Button } from 'react-bootstrap'
@@ -116,7 +118,9 @@ export default class App extends Component {
                                 artist = {this.state.artist}
                             />
 
-                            <div className="gallery">Gallery</div>
+                            <Gallery 
+                                tracks = {this.state.tracks}
+                            />
                         </div>
                     : 
                         <div>

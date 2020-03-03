@@ -23,7 +23,7 @@
 //     "user-read-playback-state",
 // ];
 
-export const TOKEN = 'BQBp12wdngVDG1YhGiWjgcWdSXQ4VeHqRdVASZhtcoDuOxv6Rsfgx5nyB52gBLi3uUn9J4XPqL2sXkrMVEW0QxQNgkYQyWrWsHH4DffPCVbajMe9BU6uuiFxTFFXrCYyKvaIfpcuEr1l762SUYMb_fhnd9OVeatX0npPigTUNk8YOtnvZ3aaGwmhYG2yTwFJB9tqGEIeQsfkr_jDeom8vaknDw_FZHsIyZ5atHalQGadPNfmJMVrI3gZAbmvh18FB4EsM34WAl0penjCa398mwKyP5NqZ37W2Q'
+export const TOKEN = 'BQC_vhLkvQZLtfFfgRzc_E6tOPUrCb-jLl_ngZMezGXdKDpDhSFgr9lY0aa7JalescF8itVRHzMz-QVbzIWSBVw9yoUjKlojtvrAQB2JzmbM0UgH5rjxC402MHi7qixKC61C8p1e-rKRchDYoIRyHPaDQfhqPa3FiGp5tnmWP_H477E90xYheoeaxYGAaiUW6xCRqjneRSyfjqX8RhSSzORhCeYKdMb5-XJ2ygn2286Vm_JrodmbmxxrExfaPIeXn5HjqgAkGXfMSJ1hKCDPztcj7P2AEgAptA'
 // export const REFRESH_TOKEN = 'AQAlIuF03grT4SbMDAkLRBjjTsaI37dWK4U9wQf4bKg3d_iO3thRgoOiOHCR6LabfSANHP9bjh4LO5oimbREF4Z0Vs2qP_XQBzoMvgxSsMG7jfMyPYLTfeE3c8Hcim1Ti8I'
 // export const AUTH_TOKEN = `Bearer ${TOKEN}&refresh_token=${REFRESH_TOKEN}`;
 export const AUTH_TOKEN = `Bearer ${TOKEN}`
