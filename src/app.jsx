@@ -1,18 +1,26 @@
-import React, { Component } from 'react';
-import "./app.css";
+import React, { Component } from 'react'
+import { AUTH_TOKEN } from "./configs/config"
+
+import Profile from './components/profile'
+
+
+import { FormGroup, FormControl, InputGroup, Button } from 'react-bootstrap'
+import { GoSearch } from "react-icons/go"
+
+import './css/app.css'
+
 // import { authEndpoint, clientId, redirectUri, responseType, scopes, showDialog } from "./config";
-import { AUTH_TOKEN } from "./config";
 // import hash from "./hash";
-import { FormGroup, FormControl, InputGroup, Button } from 'react-bootstrap';
-import { GoSearch } from "react-icons/go";
 
 
-class App extends Component {
+export default class App extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
             query: '',
+            artist: null,
+            tracks: []
         }
     }
 
@@ -21,20 +29,50 @@ class App extends Component {
         console.log('this.state', this.state);
          
         const BASE_URL='https://api.spotify.com/v1/search?';
-        const FETCH_URL = `${BASE_URL}q='${this.state.query}&type=artist&limit=1`;
-        // // const ALBUM_URL = 'https://api.spotify.com/v1/artists/';
+        let FETCH_URL = `${BASE_URL}q='${this.state.query}&type=artist&limit=1`;
+        const ALBUM_URL = 'https://api.spotify.com/v1/artists/';
 
         fetch(FETCH_URL,{
             method:'GET',
             headers: {
-            'Content-Type' :'application/json',
-            'Authorization': AUTH_TOKEN,
+                'Content-Type' :'application/json',
+                'Authorization': AUTH_TOKEN,
             },
             // mode: 'cors',
             // cache:'default'
         })
         .then(response => response.json())
-        .then(json => console.log('json', json));
+        // .then(json => console.log('json', json))
+        .then(json => {
+            let artist = json.artists.items[0];
+                        
+            console.log('artist', artist);
+            
+            this.setState({
+                artist: artist,
+            })
+
+            FETCH_URL = `${ALBUM_URL}${artist.id}/top-tracks?country=PT`;
+
+            fetch(FETCH_URL, {
+                method: 'GET',
+                headers: {
+                    'Content-Type' :'application/json',
+                    'Authorization': AUTH_TOKEN,
+                },
+            })
+            .then(response => response.json())
+            .then(json => {
+                console.log('artist\'s top tracks: ', json);
+                
+                // const tracks = json.tracks;
+                const { tracks } = json;
+                
+                this.setState({
+                    tracks: tracks
+                })
+            })
+        });
     }   
 
     render() {
@@ -48,11 +86,13 @@ class App extends Component {
                             type="text"
                             placeholder="search for an artist"
                             value={this.state.query}
-                            onChange={event => {
+                            onChange={
+                                event => {
                                     this.setState({query: event.target.value})
                                 }
                             }
-                            onKeyPress={event => {
+                            onKeyPress={
+                                event => {
                                     return event.key === 'Enter' ? this.searchArtist() : '';
                                 }
                             }
@@ -67,17 +107,24 @@ class App extends Component {
                         </InputGroup.Append>
                     </InputGroup>
                 </FormGroup>
+                
+                {
+                    this.state.artist !== null 
+                    ?
+                        <div>
+                            <Profile
+                                artist = {this.state.artist}
+                            />
 
-                <div className="app-profile">
-                    <div>Artist Picture</div>
-                    <div>Artist Name</div>
-                </div>
-                <div className="gallery">
-                    Gallery
-                </div>
+                            <div className="gallery">Gallery</div>
+                        </div>
+                    : 
+                        <div>
+                            Welcome to music master. <br></br>
+                            Search for an artist to check his profile.
+                        </div>
+                }
             </div>
         )
     }
 }
-
-export default App;
