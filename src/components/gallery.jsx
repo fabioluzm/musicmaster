@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { FaPlay } from "react-icons/fa"
+import { FaPlay, FaPause } from "react-icons/fa"
 import '../css/app.css'
 
 export default class Gallery extends Component {
@@ -28,7 +28,7 @@ export default class Gallery extends Component {
         {
             if (this.state.playingUrl === previewUrl) {
                 this.state.audio.pause();
-                this.state.setState({
+                this.setState({
                     playing: false
                 })
             }
@@ -52,7 +52,7 @@ export default class Gallery extends Component {
         return (
             <div>
                 {tracks.map((track, index) => {
-                    console.log('track',track);
+                    // console.log('track',track);
                     
                     const trackingImg = track.album.images[0].url;
                     return(
@@ -68,7 +68,13 @@ export default class Gallery extends Component {
                         />
                         <div className="track-play">
                             <div className="track-play-inner">
-                                <FaPlay />
+                                {
+                                    this.state.playingUrl === track.preview_url && this.state.playing === true
+                                    ?
+                                    <FaPause />
+                                    :
+                                    <FaPlay />
+                                }
                             </div>
                         </div>
                         <p className='track-text'>
